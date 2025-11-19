@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Prontuário</title>
+
+    <link rel="stylesheet" href="prontuario-form.css" />
+
+</head>
+
+<body>
+    <form id="prontuario">
+        <h2>Prontuário</h2>
+        <div class="inputs-formulario">
+
+            <div class="item">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite o nome do paciente">
+            </div>
+
+            <div class="item">
+                <label for="sintomas">Sintomas:</label>
+                <input type="text" id="sintomas" placeholder="Digite os sintomas do paciente">
+            </div>
+
+            <div class="item">
+                <label for="cid">CID:</label>
+                <input list="cids-datalist" id="cid" placeholder="Digite ou selecione um CID" required />
+                <datalist id="cids-datalist"></datalist>
+            </div>
+        </div>
+
+        <button type="submit" class="botao-formulario">Enviar</button>
+
+        <img src="assets/elementos_mvp/avatar.jpg" alt="Avatar de ajuda" class="avatar">
+        <div id="balao-feedback" class="balao" style="display: none;">
+            <p id="mensagem-feedback"></p>
+        </div>
+
+    </form>
+
+    <script src="prontuario-form.js" defer></script>
+
+</body>
+
+</html>
